@@ -6,9 +6,9 @@
     yum: name=tomcat state=present
   - name: Start tomcat
     service: name=tomcat state=started
-  - name: Deploy . index file
+  - name: Deploy index file
     COPY: src=index.html dest=/var/www/html
-    notify: Restart tomat
+    notify: restart tomat
   handlers:
-  - name: Restart tomcat
+  - name: restart tomcat
     service: name=tomcat state=restarted 
