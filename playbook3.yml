@@ -8,7 +8,7 @@
     service: name=tomcat state=started
   - name: Deploy index file
     COPY: src=index.html dest=/var/www/html
-    notify: restart tomat
+    notify: restart tomcat
   handlers:
   - name: restart tomcat
-    service: name=tomcat state=restarted 
+    service: name=tomcat state=restarted
