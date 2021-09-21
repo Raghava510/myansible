@@ -7,7 +7,7 @@
     service: name=tomcat state=started
   - name: deploy war file
     get_url:
-     src=https://tomcat.apache.org/tomcat-7.0-doc/appdev/sample/sample.war
+     url=https://tomcat.apache.org/tomcat-7.0-doc/appdev/sample/sample.war
      dest=/usr/share/tomcat/webapps
     notify: Restart tomcat
   handlers:
